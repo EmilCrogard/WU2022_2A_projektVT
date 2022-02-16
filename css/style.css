@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+}
+
+#gridwrapper_home{
+display: grid;
+height: auto;
+grid-template-areas: 
+"he he he he"
+"ig ig ig as"
+"ar ar ar as"
+;
+grid-template-rows: 80px minmax(200px, 300px) minmax(400px, 1fr);
+grid-template-columns: minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) minmax(50px, 120px);
+}
+
+#header_home{
+    grid-area: he;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#article_home{
+    grid-area: ar;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;   
+}
+#aside_links{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+list-style: none;
+height: 90vh;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+p{
+    width: 300px;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+#home_img{
+    grid-area: ig;
+    background-color: seagreen;
+
+}
+
+#aside_home{
+    grid-area: as;
+    background-color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
