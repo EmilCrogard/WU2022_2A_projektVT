@@ -5,21 +5,22 @@
 #gridwrapper_home{
 display: grid;
 height: auto;
+width: 100vw;
 grid-template-areas: 
-"he he he he"
 "ig ig ig as"
 "ar ar ar as"
 ;
-grid-template-rows: 80px minmax(200px, 300px) minmax(400px, 1fr);
+grid-template-rows: minmax(200px, 300px) minmax(1000px, 1fr);
 grid-template-columns: minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) minmax(50px, 120px);
 }
 
-#header_home{
-    grid-area: he;
+.header{
     background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80px;
+    width: 100vw;
 }
 
 
@@ -29,7 +30,7 @@ grid-template-columns: minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) min
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
     padding: 4rem;   
 }
 #aside_links{
@@ -61,4 +62,26 @@ p{
     grid-area: as;
     background-color: royalblue;
     font-family: Arial, Helvetica, sans-serif;
+}
+.footer{
+    height: 100px;
+    background-color: black;
+    width: 100vw;
+}
+
+/*tralfiske*/
+
+#article_tralfiske{
+width: 100vw;
+height: auto;
+display: flex;
+align-items: center;
+justify-content: top;
+flex-direction: column;
+background-color: aquamarine;
+}
+#img_tralfiske{
+    width: 500px;
+    height:auto;
+    background: blue;
 }
