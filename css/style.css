@@ -1,28 +1,51 @@
 *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#logga{
+    height: 90px;
+    width: auto;
+    margin-left: 10px;
 }
 
 #gridwrapper_home{
 display: grid;
 height: auto;
-width: 100vw;
+width: 100%;
 grid-template-areas: 
-"ig ig ig as"
-"ar ar ar as"
+"ig ig ig"
+"ar ar ar"
 ;
 grid-template-rows: minmax(200px, 300px) minmax(1000px, 1fr);
-grid-template-columns: minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) minmax(50px, 120px);
+grid-template-columns: minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr);
 }
 
 .header{
     background-color: aqua;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 80px;
-    width: 100vw;
+    width: 100%;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    width: 100%;
+    background: blue;
+}
+.burger_line {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(223,144,70);
+    margin: 5px;
+    border-radius: 10%;
+    transition: all 0.5s;
+}
 
 #article_home{
     grid-area: ar;
@@ -33,14 +56,54 @@ grid-template-columns: minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) min
     justify-content: top;
     padding: 4rem;   
 }
-#aside_links{
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
-list-style: none;
-height: 90vh;
+#header_links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 60px;
+    background-color:lightblue;
+    position: absolute;
+    left: -1300px;
+    top: 80px;
+    width: 100%;
+    list-style: none;
+    transition: 0.5s;
 }
+.header_active{
+    transform: translatex(1300px);
+}
+#header_links a{
+text-decoration: none;
+color: rgb(233, 144, 70);
+letter-spacing: 0.1875rem;
+font-weight: bold;
+font-size: 1.25rem;
+text-transform: uppercase;
+width: 200px;
+height: 3rem;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.crossed_line #line_2 {
+    opacity: 0;
+}
+
+.crossed_line #line_1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.crossed_line #line_3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#header_links a:hover {
+    color: darkgrey;
+    background-color: rgb(233, 113, 84);
+    transition: ease 0.4s;
+}
+
 h2{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -58,21 +121,16 @@ p{
 
 }
 
-#aside_home{
-    grid-area: as;
-    background-color: royalblue;
-    font-family: Arial, Helvetica, sans-serif;
-}
 .footer{
     height: 100px;
     background-color: black;
-    width: 100vw;
+    width: 100%;
 }
 
 /*tralfiske*/
 
 #article_tralfiske{
-width: 100vw;
+width: 100%;
 height: auto;
 display: flex;
 align-items: center;
