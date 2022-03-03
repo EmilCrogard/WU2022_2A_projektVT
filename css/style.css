@@ -1,33 +1,34 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-#logga{
+:root {
+    --main_color_dark: rgb(88, 169, 196);
+}
+
+#logga {
     height: 90px;
     width: auto;
     margin-left: 10px;
 }
 
-#gridwrapper_home{
-display: grid;
-height: auto;
-width: 100%;
-grid-template-areas: 
-"ig ig ig"
-"ar ar ar"
-;
-grid-template-rows: minmax(200px, 300px) minmax(1000px, 1fr);
-grid-template-columns: minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr);
+#gridwrapper_home {
+    display: grid;
+    height: auto;
+    width: 100%;
+    grid-template-areas: "ig ig" "ar ar" "fo fo";
+    grid-template-rows: minmax(200px, 300px) minmax(1000px, 1fr) 100px;
+    grid-template-columns: minmax(80px, 1fr) minmax(80px, 1fr);
 }
 
-.header{
-    background-color: aqua;
+.header {
+    background-color: var(--main_color_dark);
     display: flex;
     height: 80px;
     width: 100%;
+    position: fixed;
 }
 
 nav {
@@ -36,54 +37,59 @@ nav {
     align-items: center;
     font-family: sans-serif;
     width: 100%;
-    background: blue;
+    background: var(--main_color_dark);
 }
+
 .burger_line {
     width: 25px;
     height: 3px;
-    background-color: rgb(223,144,70);
+    background-color: rgb(255, 255, 255);
     margin: 5px;
     border-radius: 10%;
     transition: all 0.5s;
 }
 
-#article_home{
+#article_home {
     grid-area: ar;
     background-color: red;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    padding: 4rem;   
+    padding: 4rem;
 }
-#header_links{
+
+#header_links {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    align-items:center;
-    height: 60px;
-    background-color:lightblue;
-    position: absolute;
+    align-items: center;
+    height: calc(100% - 80px);
+    background-color: lightblue;
+    position: fixed;
     left: -1300px;
     top: 80px;
     width: 100%;
     list-style: none;
     transition: 0.5s;
 }
-.header_active{
+
+.header_active {
     transform: translatex(1300px);
 }
-#header_links a{
-text-decoration: none;
-color: rgb(233, 144, 70);
-letter-spacing: 0.1875rem;
-font-weight: bold;
-font-size: 1.25rem;
-text-transform: uppercase;
-width: 200px;
-height: 3rem;
-display: flex;
-justify-content: center;
-align-items: center;
+
+#header_links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.1875rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    width: 200px;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .crossed_line #line_2 {
@@ -104,42 +110,45 @@ align-items: center;
     transition: ease 0.4s;
 }
 
-h2{
+h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: underline;
 }
-p{
+
+p {
     width: 300px;
     height: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
 }
-#home_img{
+
+#home_img {
     grid-area: ig;
     background-color: seagreen;
-
 }
 
-.footer{
-    height: 100px;
-    background-color: black;
-    width: 100%;
+.footer {
+    grid-area: fo;
+    background-color: var(--main_color_dark);
+    display: flex;
 }
+
 
 /*tralfiske*/
 
-#article_tralfiske{
-width: 100%;
-height: auto;
-display: flex;
-align-items: center;
-justify-content: top;
-flex-direction: column;
-background-color: aquamarine;
+#article_tralfiske {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    background-color: aquamarine;
 }
-#img_tralfiske{
+
+#img_tralfiske {
     width: 500px;
-    height:auto;
+    height: auto;
     background: blue;
 }
