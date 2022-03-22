@@ -18,8 +18,10 @@
     display: grid;
     height: auto;
     width: 100%;
-    grid-template-areas: "ar1 ar1" "ar2 ar2" "fo fo";
-    grid-template-rows: 500px 500px 100px;
+    grid-template-areas: "ar1 ar1" 
+    "ar2 ar2"
+    "fo fo";
+    grid-template-rows: 500px 500px 110px;
     grid-template-columns: minmax(80px, 1fr) minmax(80px, 1fr);
 }
 
@@ -147,12 +149,25 @@ align-items: center;
     padding: 4rem;
 }
 
+.h3_footer{
+    size: 0.5rem;
+    color: white;
 
+}
+.h2_footer{
+    size: 0.75rem;
+    color: white;
+}
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 5px;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 3px;
+    size: 1rem;
 }
 
 p {
@@ -160,22 +175,30 @@ p {
     height: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
-}
-
-.footer {
-    grid-area: fo;
-    background-color: var(--main_color_dark);
-    display: flex;
+    margin-bottom: 8px;
 }
 
 
 /*tralfiske*/
 #top_tralfiske{
-    height: 40px;
+    height: 80px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#gridwrapper_tralfiske{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-areas: 
+    "st1 st1"
+    "st2 st2"
+    "st3 st3"
+    "fo fo"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 700px 1000px 500px 110px;
 }
 
 #article_tralfiske {
@@ -189,9 +212,35 @@ p {
 }
 
 #img_tralfiske {
-    width: 500px;
-    height: auto;
     background: blue;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+#section1_tralfiske{
+    grid-area: st1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#tral_article{
+
+}
+
+#section2_tralfiske{
+    grid-area: st2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: violet;
+}
+#section3_tralfiske{
+    grid-area: st3;
+    background:blue;
 }
 
 
@@ -203,13 +252,14 @@ p {
     height: auto;
     position: absolute;
     grid-template-areas: 
-    "arf arf arf"
-    "ark ark ark"
-    "dv dv dv"
-    "fof fof fof"
+    "arf arf"
+    "ark ark"
+    "dv dv"
+    "sek sek"
+    "fo fo"
     ;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 600px 500px 400px 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 680px 500px 500px 600px 110px;
 }
 
 #forsurning_section{
@@ -223,12 +273,14 @@ p {
 }
 #article_forsurning{
     background-color: white;
-    height: 600px;
+    height: 610px;
     width: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 3px;
+    border-style: solid;
+    border-color: var(--main_color_dark);
 }
 
 #konsekvenser_section{
@@ -249,6 +301,8 @@ p {
     align-items: center;
     justify-content: center;
     border-radius: 3px;
+    border-style: solid;
+    border-color: var(--main_color_dark);
 }
 
 #Intiativ_section{
@@ -261,38 +315,55 @@ p {
 }
 
 #div_forsurning{
-    height: 400px;
+    height: auto;
     width: 80%;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 }
-.article_div{
+#article_intiativ{
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    grid-area: fo;
+    background-color: var(--main_color_dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#kalk_section{
+    grid-area: sek;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: lightblue;
+}
+#kalk_img{
     height: 250px;
-    width: 140px;
-    border-radius: 2px;
+    width: 400px;
+    background: violet;
+}
+#article_kalk{
+    width: 350px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     border-style: solid;
     border-color: var(--main_color_dark);
     border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem;
+    background: white;
 }
-h3{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 3px;
-    size: 1rem;
-}
-
-#footer_forsurning {
-    grid-area: fof;
-    background-color: var(--main_color_dark);
-    display: flex;
-}
-
 
 /*Om oss*/
 #gridwrapper_om_oss{
@@ -305,10 +376,10 @@ h3{
     "org org"
     "fra fra"
     "gift gift"
-    "foss foss"
+    "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 90vh 1000px 400px 80px;
+    grid-template-rows: 300px 90vh 1000px 400px 110px;
 }
 
 #relative{
@@ -380,17 +451,10 @@ align-items: center;
 justify-content: center; 
 display: flex;
 }
-#footer_om_oss{
-    grid-area: foss;
-    background-color: var(--main_color_dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #h1_relative{
     color: rgb(255, 255, 255);
-    size: 2rem;
+    size: 3rem;
   
 }
 
@@ -450,5 +514,42 @@ display: flex;
         align-items: center;
         flex-direction: row;
         width: 100%;
+    }
+    #relative_flex{
+        width: 35%;
+    }
+    .organisation_img{
+        width: 500px;
+        margin-bottom: 0px;
+        margin-right: 20px;
+        border-radius: 3px;
+    }
+    #organisation_flex_section{
+        flex-direction: row; 
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+    #arbete_flex_section{
+        justify-content: space-evenly; 
+    }
+    
+    .org_div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #section_gift{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly; 
+    }
+    #div_forsurning{
+        flex-direction: row;
+       
+    }
+    #kalk_section{
+        flex-direction: row-reverse;
     }
 }
