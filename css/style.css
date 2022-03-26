@@ -22,7 +22,7 @@
     "ar1 ar1" 
     "ar2 ar2"
     "fo fo";
-    grid-template-rows: 600px 1700px 110px;
+    grid-template-rows: 950px 1700px 110px;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -118,20 +118,6 @@ nav {
     flex-direction: column;
     align-items: center;
 }
-
-.Aktuella_nyheter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem;
-    height: 150px;
-    width: 250px;
-    border-style: solid;
-    border-color: var(--main_color_dark);
-    border-radius: 3px;
-}
-
 .box_parent{
     display: flex;
     justify-content: space-evenly;
@@ -139,6 +125,23 @@ nav {
     flex-direction: column;
     height: 100%;
 }
+
+.Aktuella_nyheter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 280px;
+    width: 250px;
+    border-style: solid;
+    border-color: var(--main_color_dark);
+    border-radius: 3px;
+}
+.Aktuellt_img{
+height: auto;
+width: 200px;
+}
+
 
 #kalender{
     grid-area: ar2;
@@ -167,7 +170,7 @@ height: 80px;
     width: 297px;
     height: 100px;
 }
-.boka_button{
+.button{
     display: flex;
     height: 45px;
     width: 35%;
@@ -176,7 +179,7 @@ height: 80px;
     align-items: center;
     justify-content: center;
 }
-.boka_button:hover{
+.button:hover{
     cursor: pointer;
     background: rgb(84, 162, 226);
 
@@ -440,7 +443,7 @@ height: auto;
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 90vh 1000px 400px 110px;
+    grid-template-rows: 300px 90vh 1000px 550px 110px;
 }
 
 #relative{
@@ -490,6 +493,18 @@ height: auto;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+}
+.organisation_article_lb{
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 3px;
+    border-color: var(--main_color_dark);
+    border-style: solid;
+    height: auto;
+    background: white;
 }
 #arbete_flex_section{
     grid-area: fra;
@@ -563,7 +578,7 @@ display: flex;
     }
     .Aktuella_nyheter {
         padding: 2rem;
-        height: 240px;
+        height: 300px;
         width: 300px;
         border-style: solid;
         border-color: var(--main_color_dark);
@@ -571,9 +586,6 @@ display: flex;
     }
     
     .box_parent{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
         flex-direction: row;
         width: 100%;
     }
@@ -634,6 +646,10 @@ display: flex;
     }
     #gridwrapper_home{
         grid-template-rows: 600px 700px 110px;
+    }
+    #gridwrapper_home{
+        grid-template-rows: 300px 90vh 1000px 400px 110px;
+
     }
 
 }
