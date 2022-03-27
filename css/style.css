@@ -22,7 +22,7 @@
     "ar1 ar1" 
     "ar2 ar2"
     "fo fo";
-    grid-template-rows: 950px 1700px 110px;
+    grid-template-rows: 950px 1750px 110px;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -109,7 +109,8 @@ nav {
 
 #home_img {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(90vh - 80px);
+    margin-bottom: 8vh;
 }
 
 #aktuellt{
@@ -175,9 +176,10 @@ height: 80px;
     height: 45px;
     width: 35%;
     background: steelblue;
-    border-radius: 3px;
     align-items: center;
     justify-content: center;
+    border-radius: 3px;
+    margin-bottom: 5px;
 }
 .button:hover{
     cursor: pointer;
@@ -213,6 +215,7 @@ p {
     font-weight: 300;
     margin-bottom: 10px;
     margin-top: 5px;
+    size: 1.2rem;
 }
 .sacrifice{
     height: 80px;
@@ -233,7 +236,7 @@ p {
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 700px 1100px 1000px 700px 110px;
+    grid-template-rows: 700px 1300px 1000px 700px 110px;
 }
 
 #img_tralfiske {
@@ -256,7 +259,7 @@ p {
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 70%;
+width: 85%;
 height: auto;
 border-radius: 3px;
 border-style: solid;
@@ -272,7 +275,7 @@ background: white;
     height: 100%;
 }
 
-.tral_article{
+.intro_article{
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -325,28 +328,21 @@ height: auto;
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 680px 500px 500px 600px 110px;
+    grid-template-rows: 700px 1150px 550px 900px 110px;
 }
 
 #forsurning_section{
     grid-area: arf;
-    background-color: lightblue;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 2rem;
 }
-#article_forsurning{
-    background-color: white;
-    height: 610px;
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    border-style: solid;
-    border-color: var(--main_color_dark);
+#img_forsurning{
+    width: 400px;
+    height: auto;
 }
 
 #konsekvenser_section{
@@ -359,13 +355,14 @@ height: auto;
     padding: 2rem;
 }
 
-#article_konsekvenser{
+.article_konsekvenser{
     background-color: white;
-    height: 400px;
-    width: 95%;
+    height: 500px;
+    width: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     border-radius: 3px;
     border-style: solid;
     border-color: var(--main_color_dark);
@@ -380,8 +377,8 @@ height: auto;
     background-color: white;
 }
 
-#div_forsurning{
-    height: auto;
+.div_forsurning{
+    height: 100%;
     width: 80%;
     display: flex;
     justify-content: space-evenly;
@@ -389,12 +386,13 @@ height: auto;
     align-items: center;
 }
 #article_intiativ{
-    width: 300px;
+    width: 340px;
     height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    
 }
 
 .footer {
@@ -413,16 +411,12 @@ height: auto;
     flex-direction: column;
     background-color: lightblue;
 }
-#kalk_img{
-    height: 250px;
-    width: 400px;
-    background: violet;
-}
-#article_kalk{
+
+.article_kalk{
     width: 350px;
-    height: auto;
+    height: 240px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     border-style: solid;
@@ -443,7 +437,7 @@ height: auto;
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 90vh 1000px 550px 110px;
+    grid-template-rows: 300px 600px 1050px 930px 110px;
 }
 
 #relative{
@@ -495,15 +489,15 @@ height: auto;
     flex-direction: column;
 }
 .organisation_article_lb{
-    width: 300px;
-    height: auto;
+    width: 320px;
+    height: 270px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    align-items: center;
     border-radius: 3px;
     border-color: var(--main_color_dark);
     border-style: solid;
-    height: auto;
     background: white;
 }
 #arbete_flex_section{
@@ -525,7 +519,7 @@ grid-area: gift;
 background: lightblue;
 flex-direction: column;
 align-items: center;
-justify-content: center; 
+justify-content: space-evenly; 
 display: flex;
 }
 
@@ -615,31 +609,29 @@ display: flex;
         align-items: center;
     }
     #section_gift{
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly; 
+        flex-direction: row-reverse;
     }
-    #div_forsurning{
+    .div_forsurning{
         flex-direction: row;
        
-    }
-    #kalk_section{
-        flex-direction: row-reverse;
     }
     .tral_article_lb{
         width: 40%;
     }
     .article_parent{
         flex-direction: row;
-        width: 80%;
+        justify-content: space-evenly;
+        width: 50%;
     }
     #gridwrapper_tralfiske{
         grid-template-rows: 500px 1100px 1000px 430px 110px;
     }
     #gridwrapper_forsurning{
-        grid-template-rows: 680px 500px 500px 400px 110px;
+        grid-template-rows: 500px 600px 500px 450px 110px;
     }
-
+    #gridwrapper_om_oss{
+        grid-template-rows: 300px 600px 1050px 430px 110px;
+    }
     #img_tralfiske {
         height: 350px;
         width: 450px;
@@ -647,9 +639,11 @@ display: flex;
     #gridwrapper_home{
         grid-template-rows: 600px 700px 110px;
     }
-    #gridwrapper_home{
-        grid-template-rows: 300px 90vh 1000px 400px 110px;
-
+    #home_img {
+        height: calc(100vh - 80px);
+        margin-bottom: 10px;
     }
-
+    #gift_img{
+        display: none;
+    }
 }
