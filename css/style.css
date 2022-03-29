@@ -14,18 +14,6 @@
     margin-left: 10px;
 }
 
-#gridwrapper_home {
-    display: grid;
-    height: auto;
-    width: 100%;
-    grid-template-areas: 
-    "ar1 ar1" 
-    "ar2 ar2"
-    "fo fo";
-    grid-template-rows: 950px 1750px 110px;
-    grid-template-columns: 1fr 1fr;
-}
-
 .header {
     background-color: var(--main_color_dark);
     display: flex;
@@ -105,6 +93,27 @@ nav {
 #burger{
     margin-right: 60px;
     cursor: pointer;
+}
+.footer {
+    grid-area: fo;
+    background-color: var(--main_color_dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*Home*/
+#gridwrapper_home {
+    display: grid;
+    height: auto;
+    width: 100%;
+    grid-template-areas: 
+    "ar1 ar1" 
+    "ar2 ar2"
+    "fo fo";
+    grid-template-rows: 950px 1750px 250px;
+    grid-template-columns: 1fr 1fr;
 }
 
 #home_img {
@@ -190,11 +199,11 @@ height: 80px;
 .h3_footer{
     size: 0.5rem;
     color: white;
-
 }
 .h2_footer{
-    size: 0.75rem;
     color: white;
+    size:0.5rem;
+    display: none;
 }
 h2 {
     font-family: Arial, Helvetica, sans-serif;
@@ -236,14 +245,18 @@ p {
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 700px 1300px 1000px 700px 110px;
+    grid-template-rows: 700px 2000px 1000px 1100px 250px;
 }
-
 #img_tralfiske {
-    background: blue;
-    height: 300px;
-    width: 300px;
-    margin-bottom: 10px;
+    height: 190px;
+    width: auto;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: var(--main_color_dark);
+}
+#nordic_flags{
+    height: 400px;
+    width: auto;
 }
 #section1_tralfiske{
     grid-area: st1;
@@ -252,14 +265,11 @@ p {
     align-items: center;
     flex-direction: column;
 }
-
-
-
 .tral_article_lb{
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 85%;
+width: 90%;
 height: auto;
 border-radius: 3px;
 border-style: solid;
@@ -276,11 +286,11 @@ background: white;
 }
 
 .intro_article{
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 70%;
-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: auto;
 }
 
 #section2_tralfiske{
@@ -300,7 +310,7 @@ height: auto;
     justify-content: space-evenly;
 }
 .statistik_img{
-    width: 400px;
+    width: 300px;
     height: 300px;
     background: blue;
 }
@@ -328,7 +338,7 @@ height: auto;
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 700px 1150px 550px 900px 110px;
+    grid-template-rows: 700px 1150px 550px 900px 250px;
 }
 
 #forsurning_section{
@@ -341,7 +351,7 @@ height: auto;
     padding: 2rem;
 }
 #img_forsurning{
-    width: 400px;
+    width: 300px;
     height: auto;
 }
 
@@ -394,15 +404,6 @@ height: auto;
     flex-direction: column;
     
 }
-
-.footer {
-    grid-area: fo;
-    background-color: var(--main_color_dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
 #kalk_section{
     grid-area: sek;
     display: flex;
@@ -437,7 +438,7 @@ height: auto;
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 600px 1050px 930px 110px;
+    grid-template-rows: 300px 600px 1050px 930px 250px;
 }
 
 #relative{
@@ -530,7 +531,6 @@ display: flex;
 }
 
 #h3_relative{
-    
     color: white;
     size: 1rem;
 }
@@ -624,20 +624,26 @@ display: flex;
         width: 50%;
     }
     #gridwrapper_tralfiske{
-        grid-template-rows: 500px 1100px 1000px 430px 110px;
+        grid-template-rows: 500px 1600px 600px 480px 210px;
     }
     #gridwrapper_forsurning{
-        grid-template-rows: 500px 600px 500px 450px 110px;
+        grid-template-rows: 500px 600px 500px 450px 210px;
+    }
+    #statistik{
+        flex-direction: row;
+    }
+    #img_forsurning{
+        width: 400px;
     }
     #gridwrapper_om_oss{
-        grid-template-rows: 300px 600px 1050px 430px 110px;
+        grid-template-rows: 400px 600px 1050px 430px 210px;
     }
     #img_tralfiske {
         height: 350px;
         width: 450px;
     }
     #gridwrapper_home{
-        grid-template-rows: 600px 700px 110px;
+        grid-template-rows: 600px 700px 210px;
     }
     #home_img {
         height: calc(100vh - 80px);
@@ -645,5 +651,32 @@ display: flex;
     }
     #gift_img{
         display: none;
+    }
+    #fiskebestand_flex{
+        flex-direction: row-reverse;
+        width: 80%;
+    }
+    #article_parent_tralfiske{
+        width: 80%;
+    }
+    #article_parent_losning{
+        width: 90%;
+    }
+    #article_parent_forsurning{
+        width: 100%;
+    }
+    .article_konsekvenser{
+        width: 450px;
+    }
+    #nordic_flags{
+        height: 300px;
+    }
+    .footer{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .h2_footer{
+        display: contents;
     }
 }
