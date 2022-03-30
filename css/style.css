@@ -9,7 +9,7 @@
 }
 
 .logga {
-    height: 90px;
+    height: 110px;
     width: auto;
     margin-left: 10px;
 }
@@ -50,8 +50,8 @@
     font-weight: bold;
     font-size: 1.25rem;
     text-transform: uppercase;
-    width: 200px;
-    height: 3rem;
+    width: 400px;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,9 +67,9 @@
     transform: rotate(45deg) translate(-5px, -6px);
 }
 #header_links a:hover {
-    color: darkgrey;
     background-color: rgb(88, 169, 196);
-    transition: ease 0.4s;
+    transition: ease 0.3s;
+    font-size: 1.4rem;
 }
 
 nav {
@@ -102,6 +102,11 @@ nav {
     justify-content: center;
     flex-direction: column;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+
 
 /*Home*/
 #gridwrapper_home {
@@ -112,7 +117,7 @@ nav {
     "ar1 ar1" 
     "ar2 ar2"
     "fo fo";
-    grid-template-rows: 950px 1750px 250px;
+    grid-template-rows: 1000px 1750px 250px;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -142,17 +147,16 @@ nav {
     justify-content: center;
     flex-direction: column;
     height: 280px;
-    width: 250px;
+    width: 280px;
     border-style: solid;
     border-color: var(--main_color_dark);
     border-radius: 3px;
+    padding: 2rem;
 }
 .Aktuellt_img{
-height: auto;
-width: 200px;
+    height: auto;
+    width: 200px;
 }
-
-
 #kalender{
     grid-area: ar2;
     background-color: lightblue;
@@ -195,7 +199,9 @@ height: 80px;
     background: rgb(84, 162, 226);
 
 }
-
+.underrubrik{
+    color: rgb(48, 101, 119);
+}
 .h3_footer{
     size: 0.5rem;
     color: white;
@@ -204,6 +210,13 @@ height: 80px;
     color: white;
     size:0.5rem;
     display: none;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 h2 {
     font-family: Arial, Helvetica, sans-serif;
@@ -215,6 +228,11 @@ h3{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 8px;
     size: 1rem;
+}
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    size: 0.5rem;
 }
 
 p {
@@ -245,7 +263,7 @@ p {
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 700px 2000px 1000px 1100px 250px;
+    grid-template-rows: 700px 2000px 1000px 1050px 250px;
 }
 #img_tralfiske {
     height: 190px;
@@ -269,7 +287,7 @@ p {
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 90%;
+width: 75%;
 height: auto;
 border-radius: 3px;
 border-style: solid;
@@ -289,8 +307,9 @@ background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
-    height: auto;
+    justify-content: center;
+    width: 400px;
+    height: 300px;
 }
 
 #section2_tralfiske{
@@ -338,7 +357,7 @@ background: white;
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 700px 1150px 550px 900px 250px;
+    grid-template-rows: 700px 1750px 550px 900px 250px;
 }
 
 #forsurning_section{
@@ -353,6 +372,10 @@ background: white;
 #img_forsurning{
     width: 300px;
     height: auto;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: var(--main_color_dark);
+    border-style: solid;
 }
 
 #konsekvenser_section{
@@ -364,18 +387,21 @@ background: white;
     flex-direction: column;
     padding: 2rem;
 }
-
+#article_orsaker{
+    height: 700px;
+}
 .article_konsekvenser{
     background-color: white;
-    height: 500px;
+    height: 900px;
     width: 350px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     border-radius: 3px;
     border-style: solid;
     border-color: var(--main_color_dark);
+    border-style: solid;
 }
 
 #Intiativ_section{
@@ -475,10 +501,12 @@ background: white;
 }
 
 .organisation_img{
-    width: 300px;
+    width: 320px;
     height: auto;
     margin-bottom: 10px;
     border-radius: 3px;
+    border-style: solid;
+    border-color: var(--main_color_dark);
 }
 
 .organisation_article{
@@ -571,12 +599,8 @@ display: flex;
         margin-left: 10px;
     }
     .Aktuella_nyheter {
-        padding: 2rem;
         height: 300px;
         width: 300px;
-        border-style: solid;
-        border-color: var(--main_color_dark);
-        border-radius: 3px;
     }
     
     .box_parent{
@@ -613,6 +637,7 @@ display: flex;
     }
     .div_forsurning{
         flex-direction: row;
+        width: 100%;
        
     }
     .tral_article_lb{
@@ -624,10 +649,10 @@ display: flex;
         width: 50%;
     }
     #gridwrapper_tralfiske{
-        grid-template-rows: 500px 1600px 600px 480px 210px;
+        grid-template-rows: 500px 1500px 430px 480px 210px;
     }
     #gridwrapper_forsurning{
-        grid-template-rows: 500px 600px 500px 450px 210px;
+        grid-template-rows: 450px 1000px 500px 450px 210px;
     }
     #statistik{
         flex-direction: row;
@@ -655,9 +680,17 @@ display: flex;
     #fiskebestand_flex{
         flex-direction: row-reverse;
         width: 80%;
+        border: 3px;
+        border-style: solid;
+        border-color: white;
     }
     #article_parent_tralfiske{
         width: 80%;
+        border: 3px;
+        border-style: solid;
+        border-color: white;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
     #article_parent_losning{
         width: 90%;
@@ -667,6 +700,7 @@ display: flex;
     }
     .article_konsekvenser{
         width: 450px;
+        height: 850px;
     }
     #nordic_flags{
         height: 300px;
@@ -678,5 +712,11 @@ display: flex;
 
     .h2_footer{
         display: contents;
+    }
+    #header_links a{
+        width: 200px;
+    }
+    .intro_article{
+        margin-left: 30px;
     }
 }
