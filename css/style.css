@@ -595,7 +595,7 @@ display: flex;
     color: white;
     font-size: 1.3rem;
     height: auto;
-    width: 400px;
+    width: 340px;
 }
 
 @media screen and (min-width:800px) {
@@ -781,5 +781,8 @@ display: flex;
     .organisation_article_lb{
         width: 340px;
         height: auto;
+    }
+    #h3_relative{
+        width: 400px;
     }
 }
