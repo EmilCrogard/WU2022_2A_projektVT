@@ -8,6 +8,8 @@
     --main_color_dark: rgb(88, 169, 196);
 }
 
+/*Header*/
+
 .logga {
     height: 110px;
     width: auto;
@@ -94,6 +96,7 @@ nav {
     margin-right: 60px;
     cursor: pointer;
 }
+
 .footer {
     grid-area: fo;
     background-color: var(--main_color_dark);
