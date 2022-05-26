@@ -158,7 +158,7 @@ a {
 }
 .Aktuellt_img{
     height: auto;
-    width: 200px;
+    width: 180px;
 }
 #kalender{
     grid-area: ar2;
@@ -287,7 +287,7 @@ p {
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 700px 2000px 1000px 1050px 250px;
+    grid-template-rows: 700px 2100px 1000px 1200px 250px;
 }
 #img_tralfiske {
     height: 190px;
@@ -299,6 +299,9 @@ p {
 #nordic_flags{
     height: 400px;
     width: auto;
+}
+#article_parent_koldioxid{
+    margin-bottom: 15px;
 }
 #section1_tralfiske{
     grid-area: st1;
@@ -363,8 +366,8 @@ background: white;
     flex-wrap: wrap;
 }
 .statistik_img{
-    width: auto;
-    height: 230px;
+    width: 90%;
+    height: auto;
 }
 #section3_tralfiske{
     grid-area: st3;
@@ -392,7 +395,7 @@ background: white;
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 700px 1750px 560px 950px 250px;
+    grid-template-rows: 950px 1850px 640px 1050px 250px;
 }
 
 #forsurning_section{
@@ -425,8 +428,8 @@ background: white;
 
 .article_konsekvenser{
     background-color: white;
-    height: 700px;
-    width: 350px;
+    height: 830px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -473,7 +476,7 @@ background: white;
 }
 
 .article_kalk{
-    width: 350px;
+    width: 100%;
     height: 275px;
     display: flex;
     justify-content: space-evenly;
@@ -693,17 +696,21 @@ display: flex;
         justify-content: space-evenly;
         width: 80%;
     }
+    #forsurning_parent_intro{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #intro_article_forsurning{
+        width: 60%;
+    }
     #gridwrapper_tralfiske{
-        grid-template-rows: 500px 1500px 430px 480px 210px;
+        grid-template-rows: 500px 1500px 1400px 480px 210px;
     }
     #gridwrapper_forsurning{
-        grid-template-rows: 500px 1000px 550px 500px 210px;
-    }
-    #statistik{
-        flex-direction: row;
+        grid-template-rows: 900px 1000px 550px 500px 210px;
     }
     #img_forsurning{
-        width: 400px;
+        width: 600px;
     }
     #gridwrapper_om_oss{
         grid-template-rows: 400px 600px 1050px 430px 210px;
@@ -771,6 +778,9 @@ display: flex;
     }
     .intro_article{
         width: 400px;
+        border: 2px;
+        border-style: solid;
+        border-color: var(--main_color_dark);
     }
     p{
         width: 70%;
@@ -784,5 +794,13 @@ display: flex;
     }
     #h3_relative{
         width: 400px;
+    }
+    .statistik_img{
+        width: auto;
+        height: 350px;
+    }
+    .article_kalk{
+        width: 350px;
+        height: 275px;
     }
 }
